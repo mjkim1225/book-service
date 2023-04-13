@@ -1,0 +1,32 @@
+logging:
+  file:
+    path: ./logs
+  logback:
+    rollingpolicy:
+      max-history: 60
+  level:
+    org.hibernate.type.descriptor.sql: trace # sql 파라미터 
+    '[mj.kakao.bookservice]': 
+      client: debug
+
+# eureka:
+#   client:
+#     register-with-eureka: false
+#     fetch-registry: false
+#     eureka:
+#   instance:
+#     prefer-ip-address: true
+#     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+# management:
+#   endpoints:
+#     web:
+#       base-path: /catalog-service
+#       exposure:
+#         include:
+#         - health
+#         - refresh
+
+api:
+  url: https://dapi.kakao.com/v3/search/book
+  key: 9ec9319ad8fb88819692e649d223d799
